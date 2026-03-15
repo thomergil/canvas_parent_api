@@ -1,6 +1,6 @@
 """Base Model Definition."""
 from typing import Optional
-from pydantic.v1 import BaseModel, Field
+from pydantic import BaseModel, Field
 
 
 class ObserveeResponse(BaseModel):
