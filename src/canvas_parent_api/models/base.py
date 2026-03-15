@@ -10,7 +10,7 @@ class ObserveeResponse(BaseModel):
     created_at: str
     sortable_name: str
     short_name: str
-    observation_link_root_account: Optional[list[int]]
+    observation_link_root_account: Optional[list[int]] = None
 
 
 class CourseResponse(BaseModel):
@@ -32,26 +32,26 @@ class CourseResponse(BaseModel):
                    'blueprint', 'blueprint_restrictions',
                    'blueprint_restrictions_by_object_type', 'template']
     id: int
-    name: Optional[str]
-    course_code: Optional[str]
-    original_name: Optional[str]
-    enrollment_term_id: Optional[int]
+    name: Optional[str] = None
+    course_code: Optional[str] = None
+    original_name: Optional[str] = None
+    enrollment_term_id: Optional[int] = None
     grading_periods: Optional[list] = Field([None])
     grading_standard_id: Optional[int] = Field(None)
-    created_at: Optional[str]
+    created_at: Optional[str] = None
     start_at: Optional[str] = Field(None)
     end_at: Optional[str] = Field(None)
     enrollments: Optional[list] = Field([None])
-    calendar: Optional[dict]
-    syllabus_body: Optional[str]
-    term: Optional[dict]
-    course_progress: Optional[int]
-    public_syllabus: Optional[bool]
-    public_description: Optional[str]
-    open_enrollment: Optional[bool]
-    self_enrollment: Optional[bool]
-    course_format: Optional[str]
-    time_zone: Optional[str]
+    calendar: Optional[dict] = None
+    syllabus_body: Optional[str] = None
+    term: Optional[dict] = None
+    course_progress: Optional[int] = None
+    public_syllabus: Optional[bool] = None
+    public_description: Optional[str] = None
+    open_enrollment: Optional[bool] = None
+    self_enrollment: Optional[bool] = None
+    course_format: Optional[str] = None
+    time_zone: Optional[str] = None
 
 
 class AssignmentResponse(BaseModel):
@@ -86,22 +86,22 @@ class AssignmentResponse(BaseModel):
                    'annotatable_attachment_id', 'anonymize_students',
                    'require_lockdown_browser', 'muted']
     id: int
-    name: Optional[str]
+    name: Optional[str] = None
     description: Optional[str] = Field(None)
-    created_at: Optional[str]
-    updated_at: Optional[str]
-    due_at: Optional[str]
-    lock_at: Optional[str]
-    unlock_at: Optional[str]
-    course_id: Optional[int]
-    points_possible: Optional[float]
-    has_submitted_submissions: Optional[bool]
-    quiz_id: Optional[int]
-    discussion_topic: Optional[dict]
-    submission: Optional[dict]
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    due_at: Optional[str] = None
+    lock_at: Optional[str] = None
+    unlock_at: Optional[str] = None
+    course_id: Optional[int] = None
+    points_possible: Optional[float] = None
+    has_submitted_submissions: Optional[bool] = None
+    quiz_id: Optional[int] = None
+    discussion_topic: Optional[dict] = None
+    submission: Optional[dict] = None
     rubric: Optional[list] = Field([None])
-    can_submit: Optional[bool]
-    important_dates: Optional[bool]
+    can_submit: Optional[bool] = None
+    important_dates: Optional[bool] = None
 
 
 class SubmissionResponse(BaseModel):
@@ -116,16 +116,16 @@ class SubmissionResponse(BaseModel):
                    'posted_at', 'read_status',
                    'redo_request']
     assignment_id: int
-    attempt: Optional[int]
-    body: Optional[str]
-    grade: Optional[str]
-    grade_matches_current_submission: Optional[bool]
-    score: Optional[float]
-    submission_comments: Optional[str]
-    submitted_at: Optional[str]
-    late: Optional[bool]
-    excused: Optional[bool]
-    missing: Optional[bool]
-    late_policy_status: Optional[str]
-    points_deducted: Optional[float]
-    workflow_state: Optional[str]
+    attempt: Optional[int] = None
+    body: Optional[str] = None
+    grade: Optional[str] = None
+    grade_matches_current_submission: Optional[bool] = None
+    score: Optional[float] = None
+    submission_comments: Optional[str] = None
+    submitted_at: Optional[str] = None
+    late: Optional[bool] = None
+    excused: Optional[bool] = None
+    missing: Optional[bool] = None
+    late_policy_status: Optional[str] = None
+    points_deducted: Optional[float] = None
+    workflow_state: Optional[str] = None
